@@ -1,0 +1,147 @@
+.header-wrapper {
+  height: 58px;
+  border: 1px solid #f0f0f0;
+  .logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 56px;
+    background: url("../logo.png") no-repeat 0 0;
+    background-size: 100% 100%;
+  }
+  .nav {
+    box-sizing: border-box;
+    width: 960px;
+    padding-right: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    height: 100%;
+    .left, .right {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &-item {
+      box-sizing: border-box;
+      line-height: 56px;
+      padding: 0 15px;
+      color: #333;
+      cursor: pointer;
+      &.active {
+        color: #ea6f5a;
+      }
+    }
+    .right .nav-item {
+      color: #999999;
+    }
+    .search {
+      position: relative;
+      margin-left: 20px;
+      input {
+        box-sizing: border-box;
+        width: 160px;
+        height: 34px;
+        padding: 0 20px;
+        border: none;
+        outline: none;
+        border-radius: 19px;
+        font-size: 14px;
+        color: #666;
+        background: #eeeeee;
+        transition: width .2s ease-in;
+        &::placeholder {
+          color: #999;
+        }
+        &.focused {
+          width: 200px;
+        }
+      }
+      .icon-sousuo {
+        position: absolute;
+        right: 2px;
+        top: 2px;
+        height: 30px;
+        width: 30px;
+        line-height: 30px;
+        text-align: center;
+        color: #666;
+        border-radius: 50%;
+        transition: all .2s ease-in;
+        &.focused {
+          color: #fff;
+          background: #777777;
+          cursor: pointer;
+        }
+      }
+      &-info {
+        position: absolute;
+        left: 0;
+        top: 50px;
+        width: 240px;
+        padding: 0 20px 10px;
+        border-radius: 4px;
+        box-shadow: 0 0 8px rgba(0, 0, 0, .2);
+        transform-origin: 50% 0;
+        &.fade-enter {
+          opacity: 0;
+          transform: scaleY(0);
+        }
+        &.fade-enter-active {
+          opacity: 1;
+          transform: scaleY(1);
+          transition: all .3s;
+        }
+        &.fade-exit {
+          opacity: 1;
+          transform: scaleY(1);
+        }
+        &.fade-exit-active {
+          opacity: 0;
+          transform: scaleY(0);
+          transition: all .3s;
+        }
+        &-title {
+          margin: 15px 0;
+          line-height: 20px;
+          color: #969696;
+          font-size: 12px;
+        }
+        &-item {
+          display: inline-block;
+          line-height: 20px;
+          padding: 0 5px;
+          margin-right: 10px;
+          margin-bottom: 10px;
+          font-size: 12px;
+          border: 1px solid #ddd;
+          color: #969696;
+          border-radius: 2px;
+        }
+      }
+    }
+  }
+  .addition {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 56px;
+    button {
+      line-height: 34px;
+      border-radius: 17px;
+      margin: 12px 10px;
+      padding: 0 20px;
+      border: 1px solid #ec6149;
+      font-size: 14px;
+      &.register {
+        color: #ec6149;
+      }
+      &.write {
+        color: #fff;
+        background: #ec6149;
+      }
+    }
+  }
+}
