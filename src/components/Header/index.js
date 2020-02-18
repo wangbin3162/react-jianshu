@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { actionCreator } from './store'
 import ListArea from './ListArea'
+import { Link } from 'react-router-dom'
 
 
 class Header extends Component {
@@ -9,10 +10,10 @@ class Header extends Component {
     const props = this.props
     return (
       <div className="header-wrapper">
-        <a href="/" className="logo"> </a>
+        <Link to="/" className="logo"> </Link>
         <div className="nav">
           <div className="left">
-            <div className="nav-item active">首页</div>
+            <Link to="/" className="nav-item active">首页</Link>
             <div className="nav-item">下载APP</div>
             <div className="search">
               <input placeholder="搜索" className={props.focused ? 'focused' : null}
@@ -71,7 +72,6 @@ const mapDispatchToProps = (dispatch) => {
       dispatch(actionCreator.getHotList())
     }
   }
-
 }
 // 连接
 export default connect(mapStateToProps, mapDispatchToProps)(Header)
