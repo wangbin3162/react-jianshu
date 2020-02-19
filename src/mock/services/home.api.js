@@ -1,13 +1,15 @@
 import Mock from 'mockjs'
 import { builder } from '../util'
 
+const basePath = process.env.NODE_ENV === 'development' ? '' : '.'
+
 const getHomeInfo = (options) => {
   const mockData = {
     articleList: [
       {
         id: Mock.mock('@guid'),
         title: '推荐几个好用的手机软件',
-        imgUrl: '/images/ds.webp',
+        imgUrl: basePath + '/images/ds.webp',
         nickname: '大俗少年',
         read: 31,
         like: 19,
@@ -16,7 +18,7 @@ const getHomeInfo = (options) => {
       {
         id: Mock.mock('@guid'),
         title: '我们不再需要 Chrome？',
-        imgUrl: '/images/lx.webp',
+        imgUrl: basePath + '/images/lx.webp',
         nickname: '疯狂的鹅',
         read: 65,
         like: 56,
@@ -25,7 +27,7 @@ const getHomeInfo = (options) => {
       {
         id: Mock.mock('@guid'),
         title: '☁两年大学，这几件事正改变着我的青春。🍃',
-        imgUrl: '/images/sh.webp',
+        imgUrl: basePath + '/images/sh.webp',
         nickname: '就这样吧~',
         read: 12,
         like: 22,
@@ -34,7 +36,7 @@ const getHomeInfo = (options) => {
       {
         id: Mock.mock('@guid'),
         title: '人生中有三大“天规”，一旦违背，后半生会越过越艰难！',
-        imgUrl: '/images/sy.webp',
+        imgUrl: basePath + '/images/sy.webp',
         nickname: '王树鹏',
         read: 45,
         like: 24,
@@ -42,50 +44,50 @@ const getHomeInfo = (options) => {
       }
     ],
     topicList: [
-      { id: 1, title: '读书', imgUrl: '/images/ds.webp' },
-      { id: 2, title: '绘画', imgUrl: '/images/hh.webp' },
-      { id: 3, title: '社会热点', imgUrl: '/images/shrd.webp' },
-      { id: 4, title: '历史', imgUrl: '/images/dy.webp' },
-      { id: 5, title: '影音视听', imgUrl: '/images/ls.webp' },
-      { id: 6, title: '文艺', imgUrl: '/images/lx.webp' },
-      { id: 7, title: '励志故事', imgUrl: '/images/sh.webp' },
-      { id: 8, title: '影视', imgUrl: '/images/sy.webp' }
+      { id: 1, title: '读书', imgUrl: basePath + '/images/ds.webp' },
+      { id: 2, title: '绘画', imgUrl: basePath + '/images/hh.webp' },
+      { id: 3, title: '社会热点', imgUrl: basePath + '/images/shrd.webp' },
+      { id: 4, title: '历史', imgUrl: basePath + '/images/dy.webp' },
+      { id: 5, title: '影音视听', imgUrl: basePath + '/images/ls.webp' },
+      { id: 6, title: '文艺', imgUrl: basePath + '/images/lx.webp' },
+      { id: 7, title: '励志故事', imgUrl: basePath + '/images/sh.webp' },
+      { id: 8, title: '影视', imgUrl: basePath + '/images/sy.webp' }
     ],
     recommendList: [
-      { id: 1, imgUrl: '/images/jshy.png' },
-      { id: 2, imgUrl: '/images/yxlz.png' },
-      { id: 3, imgUrl: '/images/jsbq.png' },
-      { id: 4, imgUrl: '/images/jsdxt.png' }
+      { id: 1, imgUrl: basePath + '/images/jshy.png' },
+      { id: 2, imgUrl: basePath + '/images/yxlz.png' },
+      { id: 3, imgUrl: basePath + '/images/jsbq.png' },
+      { id: 4, imgUrl: basePath + '/images/jsdxt.png' }
     ],
     writerList: [
       {
         id: 1,
         name: '董克平日记',
-        imgUrl: '/images/ds.webp',
+        imgUrl: basePath + '/images/ds.webp',
         desc: '写了851k字 · 2.9k喜欢'
       },
       {
         id: 2,
         name: '简书钻首席小管家',
-        imgUrl: '/images/sh.webp',
+        imgUrl: basePath + '/images/sh.webp',
         desc: '写了751k字 · 3.9k喜欢'
       },
       {
         id: 3,
         name: '美诗应',
-        imgUrl: '/images/hh.webp',
+        imgUrl: basePath + '/images/hh.webp',
         desc: '写了851k字 · 2.9k喜欢'
       },
       {
         id: 4,
         name: '哲哲',
-        imgUrl: '/images/lx.webp',
+        imgUrl: basePath + '/images/lx.webp',
         desc: '写了851k字 · 2.9k喜欢'
       },
       {
         id: 5,
         name: '噶归属地',
-        imgUrl: '/images/sy.webp',
+        imgUrl: basePath + '/images/sy.webp',
         desc: '写了151k字 · 1.9k喜欢'
       }
     ]
@@ -98,7 +100,7 @@ const addList = (options) => {
     {
       id: Mock.mock('@guid'),
       title: '推荐几个好用的手机软件',
-      imgUrl: '/images/ds.webp',
+      imgUrl: basePath + '/images/ds.webp',
       nickname: '大俗少年',
       read: 31,
       like: 19,
@@ -107,7 +109,7 @@ const addList = (options) => {
     {
       id: Mock.mock('@guid'),
       title: '我们不再需要 Chrome？',
-      imgUrl: '/images/lx.webp',
+      imgUrl: basePath + '/images/lx.webp',
       nickname: '疯狂的鹅',
       read: 65,
       like: 56,
@@ -116,7 +118,7 @@ const addList = (options) => {
     {
       id: Mock.mock('@guid'),
       title: '☁两年大学，这几件事正改变着我的青春。🍃',
-      imgUrl: '/images/sh.webp',
+      imgUrl: basePath + '/images/sh.webp',
       nickname: '就这样吧~',
       read: 12,
       like: 22,
@@ -125,7 +127,7 @@ const addList = (options) => {
     {
       id: Mock.mock('@guid'),
       title: '人生中有三大“天规”，一旦违背，后半生会越过越艰难！',
-      imgUrl: '/images/sy.webp',
+      imgUrl: basePath + '/images/sy.webp',
       nickname: '王树鹏',
       read: 45,
       like: 24,
