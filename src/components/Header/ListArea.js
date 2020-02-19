@@ -9,7 +9,7 @@ class ListArea extends Component {
         <div className="search-info"
              onMouseEnter={props.handleMouseEnter}
              onMouseLeave={props.handleMouseLeave}>
-          <div className="search-info-title" flex="main:justify">
+          <div className="search-info-title" data-flex="main:justify">
             <span>热门搜索</span>
             <span style={{ cursor: 'pointer' }}
                   onClick={this.changeHot.bind(this)}>

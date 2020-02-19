@@ -6,6 +6,8 @@ import Mock from 'mockjs'
 // 防止 vuex 中的 GetInfo 早于 mock 运行，导致无法 mock 请求返回结果
 require('./services/header.api')
 require('./services/home.api')
+require('./services/detail.api')
+require('./services/login.api')
 
 Mock.setup({
   timeout: 300 // setter delay time

@@ -5,7 +5,7 @@ const getHomeInfo = (options) => {
   const mockData = {
     articleList: [
       {
-        id: 1,
+        id: Mock.mock('@guid'),
         title: '推荐几个好用的手机软件',
         imgUrl: '/images/ds.webp',
         nickname: '大俗少年',
@@ -14,7 +14,7 @@ const getHomeInfo = (options) => {
         desc: '手机软件那么多，到底有哪些是比较好，比较方便的呢？经过我多次尝试和使用，给大家推荐几个好用的app软件。 1.时光日历   这款app是适...'
       },
       {
-        id: 2,
+        id: Mock.mock('@guid'),
         title: '我们不再需要 Chrome？',
         imgUrl: '/images/lx.webp',
         nickname: '疯狂的鹅',
@@ -23,7 +23,7 @@ const getHomeInfo = (options) => {
         desc: '上位 十年前，浏览器的主要市场还在被微软的 IE 牢牢占据着。IE 作为 Windows 的默认浏览器，基本上控制了绝大部分人访问互联网的方式。...'
       },
       {
-        id: 3,
+        id: Mock.mock('@guid'),
         title: '☁两年大学，这几件事正改变着我的青春。🍃',
         imgUrl: '/images/sh.webp',
         nickname: '就这样吧~',
@@ -32,7 +32,7 @@ const getHomeInfo = (options) => {
         desc: '说句题外话，我们应该找对一个准确的方向去面对我们的生活。 一、班委竞选失败 在我刚上大学的时候，还对一切未知充满好奇。 从小养成的自傲的脾气，我...'
       },
       {
-        id: 4,
+        id: Mock.mock('@guid'),
         title: '人生中有三大“天规”，一旦违背，后半生会越过越艰难！',
         imgUrl: '/images/sy.webp',
         nickname: '王树鹏',
@@ -96,7 +96,7 @@ const getHomeInfo = (options) => {
 const addList = (options) => {
   return builder([
     {
-      id: 5,
+      id: Mock.mock('@guid'),
       title: '推荐几个好用的手机软件',
       imgUrl: '/images/ds.webp',
       nickname: '大俗少年',
@@ -105,7 +105,7 @@ const addList = (options) => {
       desc: '手机软件那么多，到底有哪些是比较好，比较方便的呢？经过我多次尝试和使用，给大家推荐几个好用的app软件。 1.时光日历   这款app是适...'
     },
     {
-      id: 6,
+      id: Mock.mock('@guid'),
       title: '我们不再需要 Chrome？',
       imgUrl: '/images/lx.webp',
       nickname: '疯狂的鹅',
@@ -114,7 +114,7 @@ const addList = (options) => {
       desc: '上位 十年前，浏览器的主要市场还在被微软的 IE 牢牢占据着。IE 作为 Windows 的默认浏览器，基本上控制了绝大部分人访问互联网的方式。...'
     },
     {
-      id: 7,
+      id: Mock.mock('@guid'),
       title: '☁两年大学，这几件事正改变着我的青春。🍃',
       imgUrl: '/images/sh.webp',
       nickname: '就这样吧~',
@@ -123,7 +123,7 @@ const addList = (options) => {
       desc: '说句题外话，我们应该找对一个准确的方向去面对我们的生活。 一、班委竞选失败 在我刚上大学的时候，还对一切未知充满好奇。 从小养成的自傲的脾气，我...'
     },
     {
-      id: 8,
+      id: Mock.mock('@guid'),
       title: '人生中有三大“天规”，一旦违背，后半生会越过越艰难！',
       imgUrl: '/images/sy.webp',
       nickname: '王树鹏',

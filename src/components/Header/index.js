@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { actionCreator } from './store'
 import ListArea from './ListArea'
 import { Link } from 'react-router-dom'
+import { actionCreator as loginActionCreator } from '../../pages/login/store'
 
 
 class Header extends Component {
@@ -28,12 +29,20 @@ class Header extends Component {
           </div>
           <div className="right">
             <div className="nav-item"><i className="iconfont icon-Aa"/></div>
-            <div className="nav-item">登录</div>
+            {
+              props.login ?
+                <div className="nav-item" onClick={props.logout}>退出</div> :
+                <Link to="/login">
+                  <div className="nav-item">登录</div>
+                </Link>
+            }
           </div>
         </div>
         <div className="addition">
           <button className="register">注册</button>
-          <button className="write"><i className="iconfont icon-bi"/>写文章</button>
+          <Link to="/write">
+            <button className="write"><i className="iconfont icon-bi"/>写文章</button>
+          </Link>
         </div>
       </div>
     )
@@ -45,7 +54,8 @@ const mapStateToProps = (state) => {
   return {
     focused: state.get('header').get('focused'),
     mouseIn: state.getIn(['header', 'mouseIn']),
-    hotList: state.getIn(['header', 'hotList'])
+    hotList: state.getIn(['header', 'hotList']),
+    login: state.getIn(['login', 'login'])
   }
 }
 // 映射dispatch
@@ -70,6 +80,9 @@ const mapDispatchToProps = (dispatch) => {
     },
     handleChange() {
       dispatch(actionCreator.getHotList())
+    },
+    logout() {
+      dispatch(loginActionCreator.logout())
     }
   }
 }
