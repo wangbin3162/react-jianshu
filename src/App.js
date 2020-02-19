@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from './components/Header'
 import store from './store'
-import { BrowserRouter, Route } from 'react-router-dom'
+import { HashRouter, Route } from 'react-router-dom'
 import loadable from './loadable'
 import { Provider } from 'react-redux'
 
@@ -13,7 +13,7 @@ const Write = loadable(() => import('./pages/write'))
 function App() {
   return (
     <Provider store={store}>
-      <BrowserRouter>
+      <HashRouter>
         <Header/>
         <div>
           {/* 如果是/detail/id 这种形式,path=/detail/:id 叫做动态路由,获取参数时获取props.match.params 即可  */}
@@ -23,7 +23,7 @@ function App() {
           <Route exact component={Detail} path="/detail/:id"/>
           <Route exact component={Write} path="/write"/>
         </div>
-      </BrowserRouter>
+      </HashRouter>
     </Provider>
   )
 }
