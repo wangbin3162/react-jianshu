@@ -4,7 +4,6 @@ import { builder, getQueryParameters } from '../util'
 const getDetail = (options) => {
   // 获取参数
   const params = getQueryParameters(options)
-  console.log(params)
   return builder({
     title: '知道这些穿搭小诀窍，又可以每天多睡五分钟啦！' + params.id,
     content: '<p>女生每天出门前都像打仗一样，除了刷牙洗脸化妆外，花最多时间的非挑衣服莫属了！想着想着就不小心错过几班公车了？这次要来告诉各位妹纸，关于懒人挑衣服的那些小诀窍！因为我们就是想多睡那 5 分钟啊！</p><p>▎帽 T\n' +
